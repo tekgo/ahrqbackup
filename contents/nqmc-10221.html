@@ -1,0 +1,788 @@
+<!DOCTYPE html><html><head><title>Optimizing patient exposure to ionizing radiation: percentage of final reports for CT studies performed for all patients, regardless of age, which document that Digital Imaging and Communications in Medicine (DICOM) format image data are available to non-affiliated external healthcare facilities or entities on a secure, media free, reciprocally searchable basis with patient authorization for at least a 12-month period after the study.</title><link rel="stylesheet" type="text/css" href="style.css"></head><body><div class='section'>
+<h2>General
+</h2>
+<div class='field field_text'>
+<h3>
+Title
+</h3>
+<div class='FieldValue'>
+<div class="content_title">Optimizing patient exposure to ionizing radiation: percentage of final reports for CT studies performed for all patients, regardless of age, which document that Digital Imaging and Communications in Medicine (DICOM) format image data are available to non-affiliated external healthcare facilities or entities on a secure, media free, reciprocally searchable basis with patient authorization for at least a 12-month period after the study.</div>
+</div>
+
+</div>
+<div class='field field_citation'>
+<h3>
+Source(s)
+</h3>
+<div class='FieldValue'>
+<table><tr><td>American Board of Medical Specialties (ABMS), American Medical Association-convened Physician Consortium for Performance Improvement® (PCPI®), American College of Radiology (ACR). Optimizing patient exposure to ionizing radiation performance measurement set. Reston (VA): American College of Radiology; 2016 Jan. 51 p.  [53 references]</td></tr></table>
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Measure Domain
+</h2>
+<div class='field field_picklist-one'>
+<h3>
+Primary Measure Domain
+</h3>
+<div class='FieldValue'>
+Clinical Quality Measures: Process
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Secondary Measure Domain
+</h3>
+<div class='FieldValue'>
+Clinical Quality Measure:  Structure
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Brief Abstract
+</h2>
+<div class='field field_text'>
+<h3>
+Description
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>This measure is used to assess the percentage of final reports for computed tomography (CT) studies performed for all patients, regardless of age, which document that Digital Imaging and Communications in Medicine (DICOM) format image data are available to non-affiliated external healthcare facilities or entities on a secure, media free, reciprocally searchable basis with patient authorization for at least a 12-month period after the study.</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Rationale
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>The current radiology information systems in hospitals generally do not collect or report radiation exposures and the medical imaging devices that communicate with radiology information systems do not currently forward data on the radiation dose received by a patient from each such test. As a result, physicians are uncertain of their patients' cumulative exposure and lifetime attributable risk (LAR), which is problematic when assessing, prioritizing and discussing the risks and benefits associated with their patients' clinical needs (Sodickson et al., 2009).</p>
+<p>National Quality Forum's (NQF's) Safe Practices for Better Healthcare-2009 Update: A Consensus Report was prepared incorporating the National Priorities Partnership six crosscutting priorities. Safe Practice 12: Patient Care Information addresses the lack of care continuum by not communicating critical patient information such as medical history, diagnostic test results, medications, treatments, and procedures. The Safe Practice Statement addressing this topic reads as follows, "Ensure that care information is transmitted and appropriately documented in a timely manner and in a clearly understandable form to patients and to all of the patient's providers/professionals, within and between care settings, who need that information to provide continued care" (NQF, 2009).</p>
+<p><strong>The following evidence statements are quoted <span style="text-decoration: underline;">verbatim</span> from the referenced clinical guidelines and/or other references</strong>:</p>
+<p><span style="text-decoration: underline;">Core functional requirements for an Internet-based system for sharing medical records</span> (Flanders, 2009)</p>
+<ol style="list-style-type: lower-alpha;" start="1">
+    <li>Methods to ensure privacy and confidentiality of data; </li>
+    <li>Capability to move and store large data files (e.g., images) with the same efficiency and reliability as possible with small data files (e.g., text); </li>
+    <li>Construction of registries, which contain "knowledge" of all fragments of medical information (and their physical location) from all sources for a given patient; </li>
+    <li>An ability to match records and accurately reconcile patient identities without a common patient identifier; </li>
+    <li>A means to regulate access to data and audit the access; </li>
+    <li>A method for moving blocks of data from one location to another; and </li>
+    <li>A method to aggregate and consume the data at the point of care. </li>
+</ol>
+<p>Optimal patient care requires that care providers and patients be able to create, manage and access comprehensive electronic health records (EHRs) efficiently and securely. The sharing of radiologic images has become a fundamental part of radiology services and is essential for delivering high-quality care. </p>
+<p><span style="text-decoration: underline;">Integrating the Healthcare Enterprise (IHE)</span><br />
+IHE is an initiative by healthcare professionals and industry to improve the way computer systems in healthcare share information. The IHE Radiology Technical Framework, defines specific implementations of established standards to achieve integration goals that promote appropriate sharing of medical information to support optimal patient care. The IHE Radiology Technical Framework includes various Integration Profiles that provide a convenient way for both users and vendors to reference a subset of the functionality detailed in the IHE Technical Framework.</p>
+<p>The Cross-enterprise Document Sharing for Imaging (XDS-I) Integration Profile specifies actors and transactions that allow users to share imaging information across enterprises. This profile depends on the IHE IT Infrastructure Cross-Enterprise Document Sharing (XDS) profile. XDS for Imaging (XDS-I) defines the information to be shared such as sets of Digital Imaging and Communications in Medicine (DICOM) instances (including images, evidence documents, and presentation states), diagnostic imaging reports provided in a ready-for-display. </p>
+<p><span style="text-decoration: underline;">Cross-Document Sharing Work Flow</span> (Mendelson et al., 2008)<br />
+The basic workflow is as follows: a document such as an x-ray report is created and stored at the document source, perhaps an imaging center. In addition, a (redundant) copy is sent into the document repository for the affinity domain in which this imaging center is participating.</p>
+<p>Upon receiving the x-ray report, the document repository registers it with the document registry for that affinity domain. The document registry ensures that the document is assigned to the correct patient by transacting with the patient identity source, which may be using the Patient Identifier Cross-Reference and Patient Demographic Query (PIX-PDQ) profiles to reconcile the varying demographic data and medical record numbers that different systems assign to the same patient. Sometime (perhaps even years) later, the patient is seen by another healthcare provider at a remote site. The healthcare provider wishes to read the prior x-ray reports. This remote site participates in the same affinity domain and is now regarded as a document consumer. As such, it may query the document registry as to the existence of the prior reports and query the document repository to obtain the reports. Again, patient identity is reconciled and confirmed using the patient identity source and the relevant IHE actors and profiles. This scenario can be expanded to describe the sharing of many kinds of healthcare documents. There are also slight variations permitted in which some of the actors can be placed either within the affinity domain centrally or at one of the sites at which documents arise.</p>
+<p><span style="text-decoration: underline;">Federal Register, Electronic Health Record Incentive Program</span> (Department of Health and Human Services &amp; Centers for Medicare and Medicaid Services [CMS], 2010)<br />
+While the Federal Register, Electronic Health Record Incentive Program is not an evidence-based clinical guideline, the Health Information Technology for Economic and Clinical Health (HITECH) Act requires the use of health information technology in improving the quality of health care, reducing medical errors, reducing health disparities, increasing prevention and improving the continuity of care among health care settings. The Incentive program includes meaningful use objectives and associated measures that pertain to the use of EHRs to facilitate the availability and use of health information.</p></div>
+</div>
+
+</div>
+<div class='field field_citation'>
+<h3>
+Evidence for Rationale
+</h3>
+<div class='FieldValue'>
+<table><tr><td>American Board of Medical Specialties (ABMS), American Medical Association-convened Physician Consortium for Performance Improvement® (PCPI®), American College of Radiology (ACR). Optimizing patient exposure to ionizing radiation performance measurement set. Reston (VA): American College of Radiology; 2016 Jan. 51 p.  [53 references]</td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Department of Health and Human Services, Centers for Medicare and Medicaid Services (CMS). Medicare and Medicaid Programs. Electronic health records (EHR) incentive programs. Final rule. [Federal Register]. 2010;75(144)&nbsp;</td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Flanders AE. Medical image and data sharing: are we there yet?. Radiographics. 2009 Sep-Oct;29(5):1247-51. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=19755594" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Mendelson DS, Bak PR, Menschik E, Siegel E. Informatics in radiology: image exchange: IHE and the evolution of image sharing. Radiographics. 2008 Nov-Dec;28(7):1817-33. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=18772272" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>National Quality Forum (NQF). Safe practices for better healthcare – 2009 update: a consensus report. Washington (DC): National Quality Forum (NQF); 2009. </td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Sodickson A, Baeyens PF, Andriole KP, Prevedello LM, Nawfel RD, Hanson R, Khorasani R. Recurrent CT, cumulative radiation exposure, and associated radiation-induced cancer risks from CT of adults. Radiology. 2009 Apr;251(1):175-84. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=19332852" target="_blank">PubMed</a></td></tr></table>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Primary Health Components
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>Ionizing radiation; Digital Imaging and Communications in Medicine (DICOM) format image data; computed tomography (CT) studies; searchable record system</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Denominator Description
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>All final reports for computed tomography (CT) studies performed for all patients, regardless of age </p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Numerator Description
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>Final reports for computed tomography (CT) studies, which document that Digital Imaging and Communications in Medicine (DICOM) format image data are available to non-affiliated external healthcare facilities or entities on a secure, media free, reciprocally searchable basis with patient authorization for at least a 12-month period after the study (see the related "Numerator Inclusions/Exclusions" field)</p></div>
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Evidence Supporting the Measure
+</h2>
+<div class='field field_picklist-choice'>
+<h3>
+Type of Evidence Supporting the Criterion of Quality for the Measure
+</h3>
+<div class='FieldValue'>
+A formal consensus procedure, involving experts in relevant clinical, methodological,  public health and organizational sciences
+</div>
+<div class='FieldValue'>
+One or more research studies published in a National Library of Medicine (NLM) indexed, peer-reviewed journal
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Additional Information Supporting Need for the Measure
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p><strong>Importance of Topic</strong><br />
+The use of medical imaging has resulted in revolutionary advances in the practice of medicine. The increased sophistication and clinical efficacy of imaging have resulted in its considerable growth. Consequently, the evolution of imaging has resulted in a significant increase in the population's cumulative exposure to ionizing radiation and a potential increase in adverse effects including cancer (Amis, Butler, &amp; American College of Radiology [ACR], 2010; Amis et al., 2007). Although experts may not agree on the extent of the risks of cancer from medical imaging, there is uniform agreement that care should be taken to weigh the medical necessity of a given level of radiation exposure against the risks, and that steps should be taken to eliminate avoidable exposure to radiation (Amis et al., 2007; Center for Devices and Radiological Health [CDRH], 2010).</p>
+<p><span style="text-decoration: underline;">High Impact Topic Area</span><br />
+This topic was chosen for measure development because of the high costs associated with imaging studies and because these medical procedures are a significant source of radiation exposure. The following objective data support the degree of increase in the use of imaging studies and emphasize the importance in taking steps to help eliminate avoidable exposure.</p>
+<p><em>Prevalence and Incidence</em> </p>
+<ul style="list-style-type: disc;">
+    <li>The average per capita exposure to ionizing radiation from imaging exams increased by about 600% from 1980 to 2006 in the United States (U.S) (Mettler et al., 2009; National Council on Radiation Protection and Measurements [NCRP], 2009). </li>
+    <li>The largest contributor to this dramatic increase in population radiation exposure is computed tomography (CT). In 1980 fewer than 3 million CT scans were performed; in 2006, there were about 380 million radiologic procedures (including 67 million CT scans) and 18 million nuclear medicine procedures performed in the U.S. (Mettler et al., 2009). </li>
+    <li>The imaging study with the single highest radiation burden, accounting for 22% of cumulative effective dose, is myocardial perfusion imaging (Fazel et al., 2009). </li>
+    <li>In 2006, an estimated 19 million head, 10.6 million chest and 21.2 million abdominal and pelvic CT scans were performed accounting for 28%, 15.9%, and 31.7%, respectively, of the total number of CT scans in the U.S. (Mettler et al., 2009). </li>
+    <li>Currently, approximately 11% of CT examinations are performed on children, which could account for more than 7 million pediatric CT examinations per year in the U.S. (Mettler et al., 2000; Frush &amp; Applegate, 2004; Linton, Mettler, &amp; NCRP, 2003). </li>
+    <li>The prevalence of CT or magnetic resonance imaging (MRI) use during emergency department (ED) visits for injury-related conditions increased from 6% in 1998 to 15% in 2007 (Korley, Pham, &amp; Kirsch, 2010). </li>
+    <li>While CT utilization has decreased steadily since 2003 in pediatric facilities across North America (Townsend et al., 2010) the use of CT in children who visit the ED increased from 0.33 to 1.65 from 1995 to 2008 and occurred primarily at non-pediatric focused facilities (Larson et al., 2011). </li>
+</ul>
+<p><em>Costs</em></p>
+<ul style="list-style-type: disc;">
+    <li>From 2000 through 2006, total Medicare expenditures for physician imaging services increased from $6.7 billion to about $14 billion, an increase of 13% per year on average (U.S. Government Accountability Office [GAO], 2008). </li>
+    <li>In 2005 imaging services represented an estimated 14% of 2005 spending included in the sustainable growth rate (SGR) calculation, but represented 27% of the total increase in such spending between 2004 and 2005. The majority of the growth occurred for advanced imaging (GAO, 2008). </li>
+    <li>In 2006, advanced imaging, including CT and MRI, accounted for 54% of total Medicare imaging expenditures, up from 43% in 2000. This translates to an increase in Medicare spending on advanced imaging from about $3 billion in 2000 to about $7.6 billion in 2006 (GAO, 2008). </li>
+</ul>
+<p><em>Disparities</em><br />
+There is variation according to age, sex, and health care market in the proportion and mean dose of patients undergoing medical imaging procedures. One study concluded that the proportion of subjects undergoing at least one imaging procedure was higher in older patients, rising from 49.5% of those who were 18 to 34 years old to 85.9% of those who were 60 to 64 years old. The study also found that women underwent procedures significantly more often than men, with a total of 78.7% of women undergoing at least one procedure during the study period, as compared with 57.9% of men (Fazel et al., 2009).</p>
+<p><strong>Opportunity for Improvement</strong><br />
+One retrospective cross-sectional study describing radiation dose associated with some of the most common types of diagnostic CT found variable radiation doses. The study found variability in the following exams: 1) routine chest exam without contrast, the CT effective doses ranged from 2 mSv to 24 mSv; 2) routine abdomen-pelvis, no contrast - CT effective dose ranged from 3 mSv to 43 mSv; 3) routine head exam - CT effective dose ranging from 0.3 mSv to 6 mSv (Smith-Bindman et al., 2009).</p>
+<p>A central database established for collecting dose indices as a function of patient qualities (i.e., gender, age, size, etc.) and exam type (i.e., lateral lumbar spine, pelvis CT, etc.), would allow the relative range of radiation dose indices to be analyzed and compared against established benchmarks.</p>
+<p>It has been estimated that between $3 and $10 billion are wasted in the U.S. annually on unnecessary or duplicative imaging studies. Duplicative imaging procedures could be substantially reduced with improved access to existing imaging data. Additionally, universal access to existing imaging studies to retrieve relevant prior images could improve diagnostic specificity for radiologists and potentially further minimize recommendations for follow-up studies (Monegain, 2009).</p></div>
+</div>
+
+</div>
+<div class='field field_citation'>
+<h3>
+Evidence for Additional Information Supporting Need for the Measure
+</h3>
+<div class='FieldValue'>
+<table><tr><td>American Board of Medical Specialties (ABMS), American Medical Association-convened Physician Consortium for Performance Improvement® (PCPI®), American College of Radiology (ACR). Optimizing patient exposure to ionizing radiation performance measurement set. Reston (VA): American College of Radiology; 2016 Jan. 51 p.  [53 references]</td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Amis ES Jr, Butler PF, American College of Radiology. ACR white paper on radiation dose in medicine: three years later. J Am Coll Radiol. 2010 Nov;7(11):865-70. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=21040868" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Amis ES Jr, Butler PF, Applegate KE, Birnbaum SB, Brateman LF, Hevezi JM, Mettler FA, Morin RL, Pentecost MJ, Smith GG, Strauss KJ, Zeman RK, American College of Radiology. American College of Radiology white paper on radiation dose in medicine. J Am Coll Radiol. 2007 May;4(5):272-84. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=17467608" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Center for Devices and Radiological Health (CDRH). Initiative to reduce unnecessary radiation exposure from medical imaging. Silver Spring (MD): U.S. Food and Drug Administration, Center for Devices and Radiological Health; 2010 Feb. 12 p. </td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Fazel R, Krumholz HM, Wang Y, Ross JS, Chen J, Ting HH, Shah ND, Nasir K, Einstein AJ, Nallamothu BK. Exposure to low-dose ionizing radiation from medical imaging procedures. N Engl J Med. 2009 Aug 27;361(9):849-57.</td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Frush DP, Applegate K. Computed tomography and radiation: understanding the issues. J Am Coll Radiol. 2004 Feb;1(2):113-9. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=17411538" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Korley FK, Pham JC, Kirsch TD. Use of advanced radiology during visits to US emergency departments for injury-related conditions, 1998-2007. JAMA. 2010 Oct 6;304(13):1465-71. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=20924012" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Larson DB, Johnson LW, Schnell BM, Goske MJ, Salisbury SR, Forman HP. Rising use of CT in child visits to the emergency department in the United States, 1995-2008. Radiology. 2011 Jun;259(3):793-801. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=21467249" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Linton OW, Mettler FA, National Council on Radiation Protection and Measurements. National conference on dose reduction in CT, with an emphasis on pediatric patients. AJR Am J Roentgenol. 2003 Aug;181(2):321-9. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=12876005" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Mettler FA Jr, Wiest PW, Locken JA, Kelsey CA. CT scanning: patterns of use and dose. J Radiol Prot. 2000 Dec;20(4):353-9. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=11140709" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Mettler FA, Bhargavan M, Faulkner K, Gilley DB, Gray JE, Ibbott GS, Lipoti JA, Mahesh M, McCrohan JL, Stabin MG, Thomadsen BR, Yoshizumi TT. Radiologic and nuclear medicine studies in the United States and worldwide: frequency, radiation dose, and comparison with other radiation sources--1950-2007. Radiology. 2009 Nov;253(2):520-31. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=19789227" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Monegain B. New coalition targets $3 billion–$10 billion wasted annually on unneeded imaging. [internet]. HealthcareITNews; 2009 Jun 16.&nbsp;</td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>National Council on Radiation Protection and Measurement (NCRP). Ionizing radiation exposure of the population of the United States. Bethesda (MD): National Council on Radiation Protection and Measurement (NCRP); 2009. </td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Smith-Bindman R, Lipson J, Marcus R, Kim KP, Mahesh M, Gould R, Berrington de Gonzalez A, Miglioretti DL. Radiation dose associated with common computed tomography examinations and the associated lifetime attributable risk of cancer. Arch Intern Med. 2009 Dec 14;169(22):2078-86.</td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>Townsend BA, Callahan MJ, Zurakowski D, Taylor GA. Has pediatric CT at children's hospitals reached its peak?. AJR Am J Roentgenol. 2010 May;194(5):1194-6. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=20410402" target="_blank">PubMed</a></td></tr></table>
+</div>
+<div class='FieldValue'>
+<table><tr><td>U.S. Government Accountability Office (GAO). Medicare Part B imaging services: rapid spending growth and shift to physician offices indicate need for CMS to consider additional management practices. Washington (DC): U.S. Government Accountability Office (GAO); 2008 Jun. 49 p. </td></tr></table>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Extent of Measure Testing
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>The measures in this set are being made available without any prior formal testing. However, many of the measures in this set (Utilization of a Standardized Nomenclature for CT Imaging Description, Count of Potential High Dose Radiation Imaging Studies: Computed Tomography (CT) and Cardiac Nuclear Medicine Studies, CT Images Available for Patient Follow-Up and Comparison Purposes, Search for Prior CT Studies through a Secure, Authorized, Media-free, Shared Archive, Appropriateness: Follow-up CT Imaging for Incidentally Detected Pulmonary Nodules According to Recommended Guidelines and Reporting to a Radiation Dose Index Registry) have been in use in the Centers for Medicare and Medicaid Services (CMS) Physician Quality Reporting System program since 2013 indicating the feasibility of collecting the data elements required for measure calculation.</p>
+<p>The American College of Radiology (ACR) recognizes the importance of thorough testing all of its measures and encourages ongoing robust testing of the Optimizing Patient Exposure to Ionizing Radiation measurement set for feasibility and reliability by organizations or individuals positioned to do so. The ACR will welcome the opportunity to promote such testing of these measures and to ensure that any results available from testing are used to refine the measures on an ongoing basis.</p></div>
+</div>
+
+</div>
+<div class='field field_citation'>
+<h3>
+Evidence for Extent of Measure Testing
+</h3>
+<div class='FieldValue'>
+<table><tr><td>American Board of Medical Specialties (ABMS), American Medical Association-convened Physician Consortium for Performance Improvement® (PCPI®), American College of Radiology (ACR). Optimizing patient exposure to ionizing radiation performance measurement set. Reston (VA): American College of Radiology; 2016 Jan. 51 p.  [53 references]</td></tr></table>
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>State of Use of the Measure
+</h2>
+<div class='field field_picklist-one'>
+<h3>
+State of Use
+</h3>
+<div class='FieldValue'>
+Current routine use
+</div>
+
+</div>
+<div class='field field_picklist-choice-3'>
+<h3>
+Current Use
+</h3>
+<div class='FieldValue'>
+not defined yet
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Application of the Measure in its Current Use
+</h2>
+<div class='field field_picklist-choice'>
+<h3>
+Measurement Setting
+</h3>
+<div class='FieldValue'>
+Ambulatory/Office-based Care
+</div>
+<div class='FieldValue'>
+Ambulatory Procedure/Imaging Center
+</div>
+<div class='FieldValue'>
+Emergency Department
+</div>
+<div class='FieldValue'>
+Hospital Inpatient
+</div>
+<div class='FieldValue'>
+Hospital Outpatient
+</div>
+
+</div>
+<div class='field field_picklist-choice-3'>
+<h3>
+Professionals Involved in Delivery of Health Services
+</h3>
+<div class='FieldValue'>
+not defined yet
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Least Aggregated Level of Services Delivery Addressed
+</h3>
+<div class='FieldValue'>
+Single Health Care Delivery or Public Health Organizations
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Statement of Acceptable Minimum Sample Size
+</h3>
+<div class='FieldValue'>
+Does not apply to this measure
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Target Population Age
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>All ages</p></div>
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Target Population Gender
+</h3>
+<div class='FieldValue'>
+Either male or female
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>National Strategy for Quality Improvement in Health Care
+</h2>
+<div class='field field_text'>
+<h3>
+National Quality Strategy Aim
+</h3>
+<div class='FieldValue'>
+<ul><li>Better Care</li></ul>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+National Quality Strategy Priority
+</h3>
+<div class='FieldValue'>
+<ul><li>Health and Well-being of Communities</li><li>Making Care Safer</li><li>Prevention and Treatment of Leading Causes of Mortality</li></ul>
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Institute of Medicine (IOM) National Health Care Quality Report Categories
+</h2>
+<div class='field field_picklist-choice'>
+<h3>
+IOM Care Need
+</h3>
+<div class='FieldValue'>
+Staying Healthy
+</div>
+
+</div>
+<div class='field field_picklist-choice'>
+<h3>
+IOM Domain
+</h3>
+<div class='FieldValue'>
+Effectiveness
+</div>
+<div class='FieldValue'>
+Safety
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Data Collection for the Measure
+</h2>
+<div class='field field_text'>
+<h3>
+Case Finding Period
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>Unspecified</p></div>
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Denominator Sampling Frame
+</h3>
+<div class='FieldValue'>
+Patients associated with provider
+</div>
+
+</div>
+<div class='field field_picklist-choice'>
+<h3>
+Denominator (Index) Event or Characteristic
+</h3>
+<div class='FieldValue'>
+Diagnostic Evaluation
+</div>
+
+</div>
+<div class='field field_picklist-choice-3'>
+<h3>
+Denominator Time Window
+</h3>
+<div class='FieldValue'>
+not defined yet
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Denominator Inclusions/Exclusions
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p><strong>Inclusions</strong><br />
+All final reports for computed tomography (CT) studies performed for all patients, regardless of age</p>
+<p><strong>Exclusions</strong><br />
+Unspecified</p></div>
+</div>
+
+</div>
+<div class='field field_picklist-choice-4'>
+<h3>
+Exclusions/Exceptions
+</h3>
+<div class='FieldValue'>
+not defined yet
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Numerator Inclusions/Exclusions
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p><strong>Inclusions</strong><br />
+Final reports for computed tomography (CT) studies, which document that Digital Imaging and Communications in Medicine (DICOM) format image data are available to non-affiliated external healthcare facilities or entities on a secure, media free*, reciprocally searchable basis with patient authorization for at least a 12-month period after the study</p>
+<p class="Note">*<em>Media-free</em>: Radiology images that are transmitted electronically <em>ONLY</em>, not images recorded on film, CD, or other imaging transmittal form. </p>
+<p><strong>Exclusions</strong> <br />
+Unspecified</p></div>
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Numerator Search Strategy
+</h3>
+<div class='FieldValue'>
+Fixed time period or point in time
+</div>
+
+</div>
+<div class='field field_picklist-many'>
+<h3>
+Data Source
+</h3>
+<div class='FieldValue'>
+Administrative clinical data
+</div>
+<div class='FieldValue'>
+Registry data
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Type of Health State
+</h3>
+<div class='FieldValue'>
+Does not apply to this measure
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Instruments Used and/or Associated with the Measure
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>Unspecified</p></div>
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Computation of the Measure
+</h2>
+<div class='field field_picklist-one'>
+<h3>
+Measure Specifies Disaggregation
+</h3>
+<div class='FieldValue'>
+Does not apply to this measure
+</div>
+
+</div>
+<div class='field field_picklist-many'>
+<h3>
+Scoring
+</h3>
+<div class='FieldValue'>
+Rate/Proportion
+</div>
+
+</div>
+<div class='field field_picklist-one'>
+<h3>
+Interpretation of Score
+</h3>
+<div class='FieldValue'>
+Desired value is a higher score
+</div>
+
+</div>
+<div class='field field_picklist-choice-3'>
+<h3>
+Allowance for Patient or Population Factors
+</h3>
+<div class='FieldValue'>
+not defined yet
+</div>
+
+</div>
+<div class='field field_picklist-choice-3'>
+<h3>
+Standard of Comparison
+</h3>
+<div class='FieldValue'>
+not defined yet
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Identifying Information
+</h2>
+<div class='field field_text'>
+<h3>
+Original Title
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>Measure #11: computed tomography (CT) images available for patient follow-up and comparison purposes.</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Measure Collection Name
+</h3>
+<div class='FieldValue'>
+Optimizing Patient Exposure to Ionizing Radiation Performance Measurement Set
+</div>
+
+</div>
+<div class='field field_orglist'>
+<h3>
+Submitter
+</h3>
+<div class='FieldValue'>
+American College of Radiology - Medical Specialty Society
+</div>
+
+</div>
+<div class='field field_orglist-p'>
+<h3>
+Developer
+</h3>
+<div class='FieldValue'>
+American College of Radiology - Medical Specialty Society
+</div>
+<div class='FieldValue'>
+Physician Consortium for Performance Improvement® - Clinical Specialty Collaboration
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Funding Source(s)
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>Unspecified</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Composition of the Group that Developed the Measure
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p><strong>Optimizing Patient Exposure to Ionizing Radiation Work Group Members</strong></p>
+<ul style="list-style-type: disc;">
+    <li>Milton J. Guiberteau, MD (<em>Co-chair</em>) (nuclear radiology/diagnostic radiology) </li>
+    <li>David Seidenwurm, MD (<em>Co-chair</em>) (neuroradiology/pediatric and diagnostic radiology) </li>
+    <li>Dennis M. Balfe, MD (diagnostic radiology) </li>
+    <li>Dorothy Bulas, MD (pediatric radiology) </li>
+    <li>Philip N. Cascade, MD (cardiothoracic radiology) </li>
+    <li>C. Daniel Johnson, MD, MS, MMM (GI radiology) </li>
+    <li>Richard L. Morin, PhD (radiologic physics) </li>
+    <li>Robert D. Rosenberg, MD (diagnostic radiology) </li>
+    <li>Howard Sandler, MD, MS (physics) (radiation oncology) </li>
+    <li>Rebecca Smith-Bindman, MD (diagnostic radiology) </li>
+    <li>Christopher Wyatt, MHM (payer representative) </li>
+</ul>
+<p><strong>Advisory Group Members</strong> </p>
+<ul style="list-style-type: disc;">
+    <li>Scott Jerome, DO (cardiology/internal medicine) </li>
+    <li>Paul M. Knechtges, MD (diagnostic radiology) </li>
+    <li>John R. Maese, MD (internal medicine/geriatrics) </li>
+    <li>Jason Sheehan, MD, PhD (neurosurgery) </li>
+    <li>Paul R. Sierzenski, MD, RDMS (emergency medicine) </li>
+    <li>Liana Watson, DM, RT(R)(M)(S)(BS), RDMS, RVT (radiography/sonography) </li>
+    <li>Sjirk J. Westra, MD (pediatric radiology) </li>
+</ul>
+<p><strong>Work Group Staff</strong></p>
+<p><em>American Board of Medical Specialties</em>: Richard Hawkins, MD; Sheila Lazier; Katie Small; Robin Wagner, RN, MHSA; Kevin Weiss, MD, MPH </p>
+<p><em>American Board of Radiology</em>: Gary Becker, MD; Jennifer Bosma, PhD; Paul Wallner, DO </p>
+<p><em>American College of Radiology</em>: Judy Burleson, MHSA </p>
+<p><em>American Medical Association</em>: Mark Antman, DDS, MBA; Elvia Chavarria, MPH; Anu Gupta, JD; Kendra Hanley, MS; Samantha Tierney, MPH </p>
+<p><em>American Medical Association-convened Physician Consortium for Performance Improvement (PCPI) Consultant</em>: Rebecca Kresowik</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Financial Disclosures/Other Potential Conflicts of Interest
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>None of the members of the Patient Optimizing Patient Exposure to Ionizing Radiation Work Group had any disqualifying material interests under the Physician Consortium for Performance Improvement (PCPI) Conflict of Interest Policy. </p></div>
+</div>
+
+</div>
+<div class='field field_picklist-many'>
+<h3>
+Measure Initiative(s)
+</h3>
+<div class='FieldValue'>
+Physician Quality Reporting System
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Adaptation
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>This measure was not adapted from another source.</p></div>
+</div>
+
+</div>
+<div class='field field_date'>
+<h3>
+Date of Most Current Version in NQMC
+</h3>
+<div class='FieldValue'>
+2016 Jan
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Measure Maintenance
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>This measure set is reviewed and updated every 3 years</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Date of Next Anticipated Revision
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>2017</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Measure Status
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>This is the current release of the measure.</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Measure Availability
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>Source available from the <a href="http://www.acr.org/~/media/ACR/Documents/PDF/QualitySafety/Quality%20Measurement/Performance%20Measures/OPEIR%20Measure%20Set%202014.pdf" title="ACR Web site">American College of Radiology (ACR) Web site</a>.</p>
+<p>For more information, contact ACR at 1891 Preston White Drive, Reston, VA 20191; Phone: 703-648-8900; E-mail: <a href="mailto:info@acr.org">info@acr.org</a>; Web site: <a href="http://www.acr.org" title="ACR Web site">www.acr.org</a>.</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+NQMC Status
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>This NQMC summary was completed by ECRI Institute on November 4, 2015. The information was verified by the measure developer on December 29, 2015.</p></div>
+</div>
+
+</div>
+<div class='field field_text'>
+<h3>
+Copyright Statement
+</h3>
+<div class='FieldValue'>
+<div class="content_para"><p>This NQMC summary is based on the original measure, which is subject to the measure developer's copyright restrictions. </p>
+<p>&copy;2014 American Board of Medical Specialties, American College of Radiology and American Medical Association. All Rights Reserved. CPT&reg; Copyright 2004-2013 American Medical Association.</p></div>
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Production
+</h2>
+<div class='field field_citation'>
+<h3>
+Source(s)
+</h3>
+<div class='FieldValue'>
+<table><tr><td>American Board of Medical Specialties (ABMS), American Medical Association-convened Physician Consortium for Performance Improvement® (PCPI®), American College of Radiology (ACR). Optimizing patient exposure to ionizing radiation performance measurement set. Reston (VA): American College of Radiology; 2016 Jan. 51 p.  [53 references]</td></tr></table>
+</div>
+
+</div>
+
+</div>
+<div class='section'>
+<h2>Disclaimer
+</h2>
+<div class='field field_text'>
+<h3>
+NQMC Disclaimer
+</h3>
+<div class='FieldValue'>
+<p>The National Quality Measures Clearinghouse™ (NQMC) does not develop, produce, approve, or endorse the measures represented on this site.</p> 
+<p>All measures summarized by NQMC and hosted on our site are produced under the auspices of medical specialty societies, relevant professional associations, public and private organizations, other government agencies, health care organizations or plans, individuals, and similar entities.</p> 
+<p>Measures represented on the NQMC Web site are submitted by measure developers, and are screened solely to determine that they meet the <a href="/help-and-about/summaries/inclusion-criteria">NQMC Inclusion Criteria</a>.</p> 
+<p>NQMC, AHRQ, and its contractor ECRI Institute make no warranties concerning the content or its reliability and/or validity of the quality measures and related materials represented on this site. Moreover, the views and opinions of developers or authors of measures represented on this site do not necessarily state or reflect those of NQMC, AHRQ, or its contractor, ECRI Institute, and inclusion or hosting of measures in NQMC may not be used for advertising or commercial endorsement purposes.</p> 
+<p>Readers with questions regarding measure content are directed to contact the measure developer.</p>
+</div>
+
+</div>
+
+</div>
+</body></html>
